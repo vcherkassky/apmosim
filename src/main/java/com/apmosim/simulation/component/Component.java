@@ -2,6 +2,7 @@ package com.apmosim.simulation.component;
 
 import java.util.Collection;
 
+import com.apmosim.simulation.signal.Signal;
 import com.apmosim.simulation.state.State;
 
 public interface Component {
@@ -14,4 +15,5 @@ public interface Component {
 	
 	void disconnect(Connection connection);
 	
+	Signal recieveSignal();
 }

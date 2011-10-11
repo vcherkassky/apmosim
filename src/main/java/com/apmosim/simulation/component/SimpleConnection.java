@@ -2,6 +2,8 @@ package com.apmosim.simulation.component;
 
 import java.lang.ref.WeakReference;
 
+import com.apmosim.simulation.signal.Signal;
+
 
 public class SimpleConnection implements Connection {
 
@@ -27,4 +29,9 @@ public class SimpleConnection implements Connection {
 		return efferentComponent.get();
 	}
 
+	@Override
+	public void passSignal(Signal signal) {
+
+		getAfferentComponent().recieveSignal();
+	}
 }
