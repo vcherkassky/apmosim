@@ -10,10 +10,8 @@ public interface Component {
 
 	Collection<Connection> getConnections();
 	
-	Connection connectAfferent(Component afferentComponent);
+	void connect(Connection connection);
 	
-	Connection connectEfferent(Component efferentComponent);
-
 	void disconnect(Connection connection);
 	
 }
